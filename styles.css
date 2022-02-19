@@ -25,13 +25,24 @@ body {
     text-align: center;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
     font-family: var(--ff-heading);
     font-weight: 900;
 }
 
 p {
+    color: var(--very-dark-grayish-blue);
     font-weight: 600;
+}
+
+a {
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
 }
 
 /* Header section */
@@ -39,14 +50,13 @@ p {
 #header {
     background-image: url('images/desktop/image-header.jpg');
     background-size: 100%;
-    background-position: cover;
+    background-position: cover center;
     color: var(--white);
     height: 90vh;  
 }
 
 .nav-link {
     color: var(--white);
-    font-weight: 600;
     margin: 0 20px;
 }
 
@@ -90,7 +100,6 @@ p {
 }
 
 .showcase-paragraph {
-    color: var(--very-dark-grayish-blue);
     padding: 5% 0;
 }
 
@@ -107,13 +116,29 @@ p {
     border-bottom: 5px solid var(--soft-red);
 }
 
+.img-container {
+    width: 50%;
+}
+
 .img-container img {
     display: block;
-    flex-basis: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 .third-row-context {
-    margin: -25% auto 0 auto;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 20px;
     width: 50%;
 }
 
@@ -121,15 +146,85 @@ p {
     text-transform: capitalize;
 }
 
+.third-row-context * {
+    color: var(--dark-desaturated-cyan);
+}
+
+.third-row-context * {
+    color: var(--dark-blue)
+}
+
 .third-row-paragraph {
-    color: var(--very-dark-grayish-blue);
     font-size: 1rem;
     padding: 5% 0;
 }
 
+/* Testimonial Section */
+
+#testimonials {
+    padding: 10%;
+    font-size: 1rem;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.testimonial-heading {
+    color: var(--grayish-blue);
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.avatar {
+    border-radius: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+}
+
+.box {
+    padding: 10px;
+}
+
+.testimonial-context {
+    padding: 15% 0;
+}
+
+.career {
+    color: var(--grayish-blue);
+}
+
+/* Gallery Section */
+
+#gallery {
+    display: flex;
+}
+
+#gallery * img {
+    width: 100%;
+}
+
+/* Footer Section */
+
+#footer {
+    background-color: var(--dark-moderate-cyan);
+    padding: 10vh 0;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
 .attribution { 
+    background-color: var(--dark-moderate-cyan);
     font-size: 11px; 
-    text-align: center; 
+    text-align: center;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
